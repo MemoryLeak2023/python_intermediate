@@ -15,7 +15,7 @@ Maar hoe kan een functie dat?
 ---
 
 ## ✨ De kracht van de unpacking operator `*`
-In Python kunnen we de `*`-operator gebruiken in de **parameterlijst van een functie** om aan te geven dat deze functie een **variabel aantal positionele argumenten** mag ontvangen.
+In Python kunnen we de `*`-operator gebruiken in de **parameterlijst van een functie** om aan te geven dat deze functie een **variabel aantal [positionele argumenten](Function_arguments.md)** mag ontvangen.
 
 Dit wordt ook wel **positional argument packing** genoemd.
 
