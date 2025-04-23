@@ -53,5 +53,5 @@ add(5, 10)
 - Je kunt `locals()` gebruiken om te zien welke namen in die functie beschikbaar zijn.
 - Parameters van de functie maken ook deel uit van de lokale namespace.
 
-Volgende stop: de mysterieuze **enclosing namespace** — gebruikt in geneste functies! 🔁
+
 
