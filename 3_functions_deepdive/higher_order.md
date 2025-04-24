@@ -63,6 +63,12 @@ bills = [115, 120, 42]
 print(total_bills(add_tax, bills))
 print(total_bills(add_tip, bills))
 ```
+Opmerking:
+
+    •	:.2f → Dat is de format specificatie:
+	•	: → betekent: “nu komt een format-instructie”
+	•	.2 → betekent: “gebruik 2 cijfers na de komma”
+	•	f → betekent: “floatnotatie”, oftewel een decimaal getal
 
 ➡️ Eén functie die je kunt hergebruiken voor meerdere berekeningen zonder herhaling van code.
 
@@ -70,19 +76,33 @@ print(total_bills(add_tip, bills))
 
 ## 🔄 Functies als return value
 Je kunt ook functies **teruggeven** vanuit een andere functie:
+### 🎯 1. Vaste btw-tarieven (bijvoorbeeld per land of sector)
 ```python
-def make_box_volume_function(height):
-    def volume(length, width):
-        return length * width * height
-    return volume
+def maak_btw_functie(tarief):
+    def voeg_btw_toe(bedrag):
+        return bedrag + bedrag * tarief
+    return voeg_btw_toe
 
-volume_15 = make_box_volume_function(15)
-print(volume_15(3,2))  # => 90
+btw_belgie = maak_btw_functie(0.21)
+btw_nederland = maak_btw_functie(0.21)
+btw_duitsland = maak_btw_functie(0.19)
 
-volume_10 = make_box_volume_function(10)
-print(volume_10(3,2))  # => 60
+print(btw_belgie(100))     # 121.0
+print(btw_duitsland(100))  # 119.0
 ```
+### 🧱 2. Kortingssystemen (bijv. voor Black Friday of vaste klanten)
+```python
+def maak_korting_functie(korting_percentage):
+    def pas_korting_toe(bedrag):
+        return bedrag * (1 - korting_percentage)
+    return pas_korting_toe
 
+black_friday = maak_korting_functie(0.50)
+vaste_klant = maak_korting_functie(0.10)
+
+print(black_friday(200))  # 100.0
+print(vaste_klant(200))   # 180.0
+```
 ➡️ Dit is krachtig voor **functies op maat**, gebaseerd op specifieke parameters.
 
 ---
