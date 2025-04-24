@@ -1,7 +1,7 @@
-def print_animals(animal1, animal2, *args, animal4, **kwargs):
-    print(animal1, animal2)
-    print(args)
-    print(animal4)
-    print(kwargs)
+def greeting_replicator(greeting, reps):
+  replicated = greeting * reps
+  def print_replicated_greeting():
+    print(replicated)
+  print_replicated_greeting()
 
-print_animals('Snake', 'Fish', 'Guinea Pig', 'Owl', animal4='Cat', animal5='Dog')
+greeting_replicator("hello ", 3)
