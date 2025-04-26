@@ -1,4 +1,8 @@
 class Dier:
+    #def __str__(self):
+      #return 'Dit is de door Sandra bedachte klasse: Dier'  
+
+
     def geluid(self):
         print("Het dier maakt een geluid")
 
@@ -24,3 +28,5 @@ d.geluid()  # → Het dier maakt een geluid.
 h.geluid()  # → Woef!
 k.geluid()  # → Miauw!
 p.geluid()  # → Woef! \n ...maar dan met een schattig piepje 🐶
+
+print(k)
